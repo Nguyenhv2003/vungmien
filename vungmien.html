@@ -1,0 +1,667 @@
+<html>
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <script src="http://code.jquery.com/jquery-latest.js"></script>
+ <script type="text/javascript" src="supernote_bddl.js"></script>
+        <title>Bắc Trung Bộ</title>
+        <!---------Thanh Hóa---------->
+        <style>  
+          *{padding:0; margin:0}
+          a{font-weight:bold; color:#333; font-size:12px; line-height:120%}
+          a:hover{font-weight:bold; color:#FFFF00; font-size:12px;}
+          .text_c{text-align:center}
+          .an{display:none}
+          .hien{display:block}
+          .muonglat{position:absolute; top:110px; left:65px; color:#000000; }
+          .quanhoa{position:absolute; top:146px; left:185px; color:#000000;}
+          .bathuoc{position:absolute; top:172px; left:300px; color:#000000;}
+          .quanson{position:absolute; top:222px; left:147px; color:#000000;}
+          .langchanh{position:absolute; top:251px; left:241px; color:#000000;}
+          .thuongxuan{position:absolute; top:322px; left:251px; color:#000000;}
+          .ngoclac{position:absolute; top:286px; left:340px; color:#000000;}
+          .camthuy{position:absolute; top:229px; left:357px; color:#000000;}
+          .thachthanh{width:35px; position:absolute; top:204px; left:414px; color:#000000;}
+          .vinhloc{width:35px; position:absolute; top:286px; left:444px; color:#000000;}
+          .yendinh{position:absolute; top:2322px; left:423px; color:#000000;}
+          .thoxuan{ position:absolute; top:345px; left:377px; color:#000000;}
+          .trieuson{position:absolute; top:383px; left:400px; color:#000000;}
+          .nhuthanh{width:35px; position:absolute; top:431px; left:412px; color:#000000;}
+          .nhuxuan{width:35px;position:absolute; top:450px; left:346px ; color:#000000;}
+          .hatrung{width:35px;position:absolute; top:292px; left:508px; color:#000000;}
+          .TXBimSon{width:65px;position:absolute; top:275px; left:526px; color: gold}
+          .ngason{position:absolute; top:302px; left:563px;; color:#000000;}
+          .hauloc{position:absolute; top:336px; left:520px; color:#000000;}
+          .hoanghoa{position:absolute; top:370px; left:530px; color:#000000;}
+          .thieuhoa{position:absolute; top:352px; left:450px; color:#000000;}
+          .TPThanhHoa{width:72px; position:absolute; top:385px; left:500px; color:gold}
+          .TXSamSon{position:absolute; top:423px; left:546px; color: gold}
+          .dongson{width:44px; position:absolute; top:383px; left:468px; color:#000000;}
+          .quangxuong{width:55px; position:absolute; top:429px; left:492px; color:#000000;}
+          .nongcong{width:56px; position:absolute; top:448px; left:459px; color:#000000;}
+          .tinhgia{position:absolute; top:519px; left:474px ; color:#000000;}
+          
+          .khung_bando{width:649px; height:575px; top:15px; left:5px; position:absolute}
+          .bando_bg{width:649px; height:575px; background:url(http://thanhnhaho.vn/Portals/BanDoDuLich/Images/dulichthanhhoa.png) top left no-repeat}
+          
+          .a{width:268px; height:186px; background:#ccc; position:absolute; top:350px; left:0px;}
+          
+          /*Super Note*/ 
+          .fallback {display: none;}
+          .notedefault a:hover{color:#FF6633; font-size:12px;}
+          .notedefault, .notenested { position: absolute; visibility: hidden; top: 4cm; left: 4cm; width: 16cm; height: 18cm ; }
+          .notedefault { padding: 3px; border: 1px solid #ff9933; background-color: #f7e9e5; color: #333;}
+          .notenested { width: 12cm; padding: 3px; border: 1px solid #ff9933; background-color: #f7e9e5; opacity:0.6; color: #333;}
+          .snp-mouseoffset, .snp-triggeroffset, .snp-mousetrack { margin-left: 35px; margin-top: 36px;}
+          .snp-mousetrack{z-index:10}
+          .notedefault h5 { margin: 0 0 5px 0; padding: 2px; background-color: white; color: red; }
+          .note-close { float: right; margin-top: 2px; width: 14px; height: 14px; line-height: 14px; color: black; text-decoration: none; visibility: hidden; }
+          .snb-pinned .note-close { visibility: inherit;}
+          .img_note{width:100%; height:116px; text-align:center; overflow:hidden}
+          /*End Super Note*/
+          </style>
+          <!--------Nghệ An----------->
+          
+          <style>
+            *{padding:0; margin:0}
+            a{font-weight:bold; color:#333; font-size:12px; line-height:120%}
+            a:hover{font-weight:bold; color:#FFFF00; font-size:12px;}
+            .text_c{text-align:center}
+            .an{display:none}
+            .hien{display:block}
+            .vinh{position:absolute; top:14.8cm; left:17.5cm;}
+            .namdan{position:absolute; top:15.1cm; left:15.4cm;}
+            .cualo{position:absolute; top:13.7cm; left:18cm;}
+            
+            .khungbando{width:649px; height:575px; top:15px; left:5px; position:absolute}
+            .bandobg{width:90%; height:575px; background:url(file:///E:/Hackathon/picture/nghean.png) top left no-repeat}
+            .a{width:268px; height:186px; background:#ccc; position:absolute; top:350px; left:0px;}
+            
+            /*Super Note*/
+            .fallback {display: none;}
+            .notedefault1 a:hover{color:#FF6633; font-size:12px;}
+            .notedefault1, .notenested1 { position: absolute; visibility: hidden; top: 35px; left: 10.4cm; width: 10cm; }
+            .notedefault1 { padding: 3px; border: 1px solid #ff9933; background-color: #f7e9e5; color: #333;}
+            .notenested1 { width: 12em; padding: 3px; border: 1px solid #ff9933; background-color: #f7e9e5; opacity:0.6; color: #333;}
+            .snpmouseoffset, .snptriggeroffset, .snpmousetrack { margin-left: 12cm; margin-top: 35px;}
+            .snpmousetrack{z-index:10}
+            .notedefault1 h5 { margin: 0 0 5px 0; padding: 2px; background-color: white; color: red; }
+            .noteclose { float: right; margin-top: 2px; width: 14px; height: 14px; line-height: 14px; color: black; text-decoration: none; visibility: hidden; }
+            .snbpinned .noteclose { visibility: inherit;}
+            .imgnote{width:100%; height:116px; text-align:center; overflow:hidden}
+            /*End Super Note*/
+            
+            </style>
+
+<style>
+  img.cangiuasl4 {display: block; margin-left: auto; margin-right: auto;}
+</style>
+<script src="https://lichngaytot.com/Content/Js/Libs/jquery-3.4.1.min.js"></script>
+<script src="https://lichngaytot.com/Content/Js/Libs/jquery-ui.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" href="assets/img/">
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link href="css/slides.min.css?41331" rel="stylesheet" type="text/css">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">  
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/slides.min.js?41331" type="text/javascript"></script>
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
+<style type="text/css">
+  .linh{width: 100%;}
+</style>
+<style>
+  .yeudlinh {display:none;}
+</style>
+  <style>
+    .nhv {display:none;}
+    </style>
+<style type="text/css">
+  .linh1{width: 100%;}
+</style>
+<style type="text/css">
+  .linh2{width: 100%;}
+</style>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+  }
+  
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  } 
+  
+  .content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  .mySlides {display:none;}
+  .owoSlides {display:none;}
+  h5 {
+     text-shadow: 1px 1px #505050;
+  }
+
+  .flip-card {
+  margin:auto;
+  background-color: transparent;
+  width: 300px;
+  height: 400px;
+  perspective: 40px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+    text-align: center;
+    color: rgb(192, 168, 168);
+  }
+
+  .flip-card-back {
+    background-color: #184638;
+    color: white;
+    
+    transform: rotateY(180deg);
+  }
+  
+</style>
+    </head>
+    <body>
+        <body class="slides chain simplifiedMobile animated">
+            <!-- Navigation -->
+            <nav class="side pole">
+              <div class="navigation">
+                <ul></ul>
+              </div>
+            </nav>
+            <!--------------slide 0------------------------------>
+            <section class="slide fade-6 kenBurns">
+              <div class="content">
+                <div class="container">
+                    <h1 class="ae-1"><b> <center>Bắc Trung Bộ</center></b></h1>
+                    <img src="file:///E:/Hackathon/picture/bdmientrung.jpg" class="ae-3 cangiuasl4" width="40%">
+                </div>
+              </div>
+              <div class="background" style="background-image:url(https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2017/11/cac-bai-bien-dep-nhat-mien-trung-vntrip.vn_-1-e1510738949367.jpg)"></div>
+            </section>
+            <!------Slide 1-------->
+            <section class="slide fade-6 kenBurns">
+              <div class="content">
+                <div class="container">
+                    <h1 class="ae-1"><b> <center>Bắc Trung Bộ<br><br></center></b></h1>
+                    <table width="100%">
+                      <tr>
+                        <th width="33%">
+                          <a href="#ThanhHoa"><img src="file:///E:/Hackathon/picture/thoa.png" width="140" class="ae-4"></a>
+                          <h5 class="ae-6">Thanh Hóa<br><br></h5>
+                        </th>
+                        <th width="33%">
+                          <a href="#NgheAn"><img src="file:///E:/Hackathon/picture/nan.png" width="140" class="ae-4"></a>
+                          <h5 class="ae-6">Nghệ An<br><br></h5>
+                        </th>
+                        <th width="33%">
+                          <img src="file:///E:/Hackathon/picture/hatinh.jpg" width="140" class="ae-4">
+                          <h5 class="ae-6">Hà Tĩnh<br><br></h5>
+                        </th>
+                      </tr>
+                      <tr>
+                        <th width="33%">
+                          <img src="file:///E:/Hackathon/picture/qbinh1.jpg" width="140" class="ae-4">
+                          <h5 class="ae-6">Quảng Bình<br><br></h5>
+                        </th>
+                        <th width="33%">
+                          <img src="file:///E:/Hackathon/picture/qtri1.jpg" width="140" class="ae-4">
+                          <h5 class="ae-6">Quảng Trị<br><br></h5>
+                        </th>
+                        <th width="33%">
+                          <img src="file:///E:/Hackathon/picture/hue.jpg" width="140" class="ae-4">
+                          <h5 class="ae-6">Thừa Thiên Huế<br><br></h5>
+                        </th>
+                      </tr>
+                    </table>
+                </div>
+              </div>
+              <div class="background" style="background-image:url(https://2sao.vietnamnetjsc.vn/images/2017/08/02/07/14/mien-trung-1.jpg)"></div>
+            </section>
+            <!---------slide Thanh Hóa----------->
+            <section class="slide fade-6 kenBurns" id="ThanhHoa">
+              <div class="content">
+                <div class="container">
+                  <h1 class="ae-1" id="thanhhoa"><center><b>THANH HÓA</b></center></h1>
+              <script type="text/javascript">
+                var supernote = new SuperNote('supernote', {});
+                function animFade(ref, counter)
+                {
+                 var f = ref.filters, done = (counter == 1);
+                 if (f)
+                 {
+                  if (!done && ref.style.filter.indexOf("alpha") == -1)
+                   ref.style.filter += ' alpha(opacity=' + (counter * 10) + ')';
+                  else if (f.length && f.alpha) with (f.alpha)
+                  {
+                   if (done) enabled = false;
+                   else { opacity = (counter * 10); enabled=true }
+                  }
+                 }
+                 else ref.style.opacity = ref.style.MozOpacity = counter*20.999;
+                };
+                supernote.animations[supernote.animations.length] = animFade;
+                
+                addEvent(document, 'click', function(evt)
+                {
+                 var elm = evt.target || evt.srcElement, closeBtn, note;
+                
+                 while (elm)
+                 {
+                  if ((/note-close/).test(elm.className)) closeBtn = elm;
+                  if ((/snb-pinned/).test(elm.className)) { note = elm; break }
+                  elm = elm.parentNode;
+                 }
+                
+                 if (closeBtn && note)
+                 {
+                  var noteData = note.id.match(/([a-z_\-0-9]+)-note-([a-z_\-0-9]+)/i);
+                  for (var i = 0; i < SuperNote.instances.length; i++)
+                   if (SuperNote.instances[i].myName == noteData[1])
+                   {
+                    setTimeout('SuperNote.instances[' + i + '].setVis("' + noteData[2] +
+                     '", false, true)', 10);
+                  cancelEvent(evt);
+                   }
+                 }
+                });
+                
+                addEvent(supernote, 'show', function(noteID)
+                {
+                 // Do cool stuff here!
+                });
+                addEvent(supernote, 'hide', function(noteID)
+                {
+                 // Do cool stuff here!
+                });
+                
+                </script>
+                
+                
+                <div class="bando_bg fl"></div>
+                
+                <div class="khung_bando">
+                  <a href="#muonglat" class="supernote-hover-muonglat ae-3"><div class="muonglat f1">Mường Lát</div></a>
+                  <a href="#quanhoa" class="supernote-hover-quanhoa ae-3"><div class="quanhoa fl">Quan Hóa</div></a>
+                  <a href="#bathuoc" class="supernote-hover-bathuoc ae-3"><div class="bathuoc fl">Bá Thước</div></a>
+                  <a href="#ngoclac" class="supernote-hover-ngoclac ae-3"><div class="ngoclac fl">Ngọc Lạc</div></a>
+                  <a href="#quanson" class="supernote-hover-quanson ae-3"><div class="quanson fl">Quan Sơn</div></a>
+                  <a href="#camthuy" class="supernote-hover-camthuy ae-3"><div class="camthuy fl">Cẩm Thủy</div></a>
+                  <a href="#langchanh" class="supernote-hover-langchanh ae-3"><div class="langchanh fl">Lang Chánh</div></a>
+                  <a href="#vinhloc" class="supernote-hover-vinhloc ae-3"><div class="vinhloc fl">Vĩnh Lộc</div></a>
+                  <a href="#thuongxuan" class="supernote-hover-thuongxuan ae-3"><div class="thuongxuan fl">Thường Xuân</div></a>
+                  <a href="#thachthanh" class="supernote-hover-thachthanh ae-3"><div class="thachthanh fl">Thạch Thanh</div></a>
+                  <a href="#trieuson" class="supernote-hover-trieuson ae-3"><div class="trieuson fl">Triệu Sơn</div></a>
+                  <a href="#nhuthanh" class="supernote-hover-nhuthanh ae-3"><div class="nhuthanh fl">Như Thanh</div></a>
+                  <a href="#nhuxuan" class="supernote-hover-nhuxuan ae-3"><div class="nhuxuan fl">Như Xuân</div></a>
+                  <a href="#yendinh" class="supernote-hover-yendinh ae-3"><div class="yendinh fl">Yên Định</div></a>
+                  <a href="#thoxuan" class="supernote-hover-thoxuan ae-3"><div class="thoxuan fl">Thọ Xuân</div></a>
+                  <a href="#TXSamSon" class="supernote-hover-TXSamSon ae-3"><div class="TXSamSon fl">TX. Sầm Sơn</div></a>
+                  <a href="#dongson" class="supernote-hover-dongson ae-3"><div class="dongson fl">Đông Sơn</div></a>
+                  <a href="#thieuhoa" class="supernote-hover-thieuhoa ae-3"><div class="thieuhoa fl">Thiệu Hóa</div></a>
+                  <a href="#hoanghoa" class="supernote-hover-hoanghoa ae-3"><div class="hoanghoa fl">Hoằng Hóa</div></a>
+                  <a href="#hauloc" class="supernote-hover-hauloc ae-3"><div class="hauloc fl">Hậu Lộc</div></a>
+                  <a href="#hatrung" class="supernote-hover-hatrung ae-3"><div class="hatrung fl">Hà Trung</div></a>
+                  <a href="#quangxuong" class="supernote-hover-nongcong ae-3"><div class="quangxuong fl">Quảng Xương</div></a>
+                  <a href="#nongcong" class="supernote-hover-nongcong ae-3"><div class="nongcong fl">Nông Cống</div></a>
+                  <a href="#ngason" class="supernote-hover-ngason ae-3"><div class="ngason fl">Nga Sơn</div></a>
+                  <a href="#TXBimSon" class="supernote-hover-TXBimSon ae-3"><div class="TXBimSon fl">TX. Bỉm Sơn</div></a>
+                  <a href="#TPThanhHoa" class="supernote-hover-TPThanhHoa ae-3"><div class="TPThanhHoa fl">TP. Thanh Hóa</div></a>
+                  <a href="#tinhgia" class="supernote-hover-tinhgia ae-3"><div class="tinhgia fl">Tĩnh Gia</div></a>
+                </div>
+                
+                <script>
+                $("a").hover(function(){$(this).fadeOut(10);$(this).fadeIn(100);});
+                </script>
+                <!--Content Mường Lát-->
+                <div id="supernote-note-muonglat" class="snp-mouseoffset pinnable notedefault">
+                   <a name="muonglat"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Mường Lát!</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/vietlao-cautreo.png" width="200" /></div>
+                   <p class="text_c">Cầu treo Việt - Lào</p>
+                   <a href="#anchor-muonglat2" class="supernote-hover-muonglat2"></a>
+                </div>
+                <!--End Content Mường Lát-->
+                
+                <!--Content Quan Sơn-->
+                <div id="supernote-note-quanson" class="snp-mouseoffset pinnable notedefault">
+                   <a name="quanson"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Quan Sơn!</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/quanson-ruongbacthang.png" width="200" /></div>
+                   <p class="text_c">Ruộng Bậc Thang</p>
+                </div>
+                <!--End Content Quan Sơn-->
+                
+                <!--Content Quan Hòa-->
+                <div id="supernote-note-quanhoa" class="snp-mouseoffset pinnable notedefault">
+                   <a name="quanhoa"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Quan Hóa!</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/quanhoa-detthocam.png" width="200" /></div>
+                   <p class="text_c">Dệt thổ cẩm</p>
+                </div>
+                <!--End Content Quan Hòa-->
+                
+                <!--Content Bá Thước-->
+                <div id="supernote-note-bathuoc" class="snp-mouseoffset pinnable notedefault">
+                   <a name="bathuoc"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Bá Thước!</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/bathuoc-pulong.png" width="200" /></div>
+                   <p class="text_c">Một thoáng Pù Lông</p>
+                </div>
+                <!--End Content Bá Thước-->
+                
+                <!--Content Lang Chánh-->
+                <div id="supernote-note-langchanh" class="snp-mouseoffset pinnable notedefault">
+                   <a name="langchanh"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Lang Chánh!</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/langchanh-cautreo.png" width="200" /></div>
+                   <p class="text_c">Cầu treo</p>
+                </div>
+                <!--End Content Lang Chánh-->
+                
+                <!--Content Thường Xuân-->
+                <div id="supernote-note-thuongxuan" class="snp-mouseoffset pinnable notedefault">
+                   <a name="thuongxuan"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Thường Xuân!</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Khu-bao-ton-thien-nhien-Xuan-Lien.png" width="200" /></div>
+                   <p class="text_c">Khu bảo tồn thiên nhiên Xuân Liên</p>
+                </div>
+                <!--End Content Thường Xuân-->
+                
+                <!--Content Ngọc Lạc-->
+                <div id="supernote-note-ngoclac" class="snp-mouseoffset pinnable notedefault">
+                   <a name="ngoclac"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Ngọc Lạc!</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Duong-HCM.png" width="200" /></div>
+                   <p class="text_c">Đường Hồ Chí Minh</p>
+                </div>
+                <!--End Content Ngọc Lạc-->
+                
+                <!--Content Cẩm Thủy-->
+                <div id="supernote-note-camthuy" class="snp-mouseoffset pinnable notedefault">
+                   <a name="camthuy"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Cẩm Thủy!</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Suoi-Ca-Than.png" width="200" /></div>
+                   <p class="text_c">Suối Cá Thần</p>
+                </div>
+                <!--End Content Cẩm Thủy-->
+                
+                <!--Content Thạch Thanh-->
+                <div id="supernote-note-thachthanh" class="snp-mouseoffset pinnable notedefault">
+                   <a name="thachthanh"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Thạch Thanh!</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Hang-Con-Moong.png" width="200" /></div>
+                   <p class="text_c">Hang Con Moong</p>
+                </div>
+                <!--End Content Thạch Thanh-->
+                
+                <!--Content Thọ Xuân-->
+                <div id="supernote-note-thoxuan" class="snp-mouseoffset pinnable notedefault">
+                   <a name="thoxuan"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Thọ Xuân!</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Khu-di-tich-Lam-Kinh.png" width="200" /></div>
+                   <p class="text_c">Khu di tích Lam Kinh</p>
+                </div>
+                <!--End Content Thọ Xuân-->
+                
+                <!--Content Triệu Sơn -->
+                <div id="supernote-note-trieuson" class="snp-mouseoffset pinnable notedefault">
+                   <a name="trieuson"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Triệu Sơn !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Bai-Co.png" width="200" /></div>
+                   <p class="text_c">Bãi Cò</p>
+                </div>
+                <!--End Content Triệu Sơn -->
+                
+                <!--Content Như Xuân -->
+                <div id="supernote-note-nhuxuan" class="snp-mouseoffset pinnable notedefault">
+                   <a name="nhuxuan"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Như Xuân !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Nhu-Xuan.png" width="200" /></div>
+                  
+                </div>
+                <!--End Content Như Xuân -->
+                
+                <!--Content Như Thanh -->
+                <div id="supernote-note-nhuthanh" class="snp-mouseoffset pinnable notedefault">
+                   <a name="nhuthanh"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Như Thanh !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Vuong-quoc-gia-Ben-En.png" width="200" /></div>
+                   <p class="text_c">Vườn quốc gia Bến En</p>
+                </div>
+                <!--End Content Như Thanh -->
+                
+                <!--Content Hoằng Hóa -->
+                <div id="supernote-note-hoanghoa" class="snp-mouseoffset pinnable notedefault">
+                   <a name="hoanghoa"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Hoằng Hóa !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Bai-bien-Hoang-Tien.png" width="200" /></div>
+                   <p class="text_c">Bãi biển Hoằng Tiến</p>
+                </div>
+                <!--End Content Hoằng Hóa -->
+                
+                <!--Content Hậu Lộc -->
+                <div id="supernote-note-hauloc" class="snp-mouseoffset pinnable notedefault">
+                   <a name="hauloc"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Hậu Lộc !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Le-hoi-den-Ba-Trieu.png" width="200" /></div>
+                   <p class="text_c">Lễ hội đền Bà Triệu</p>
+                </div>
+                <!--End Content Hậu Lộc -->
+                
+                <!--Content Hà Trung -->
+                <div id="supernote-note-hatrung" class="snp-mouseoffset pinnable notedefault">
+                   <a name="hatrung"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Hà Trung !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Le-hoi-den-Han-Son.png" width="200" /></div>
+                   <p class="text_c">Lễ hội đền Hàn Sơn</p>
+                </div>
+                <!--End Content Hà Trung -->
+                
+                <!--Content Nga Sơn -->
+                <div id="supernote-note-ngason" class="snp-mouseoffset pinnable notedefault" style="left:622px; top:30px; visibility:hidden; opacity:0;">
+                   <a name="ngason"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Nga Sơn !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Dong-Tu-Thuc.png" width="200" /></div>
+                   <p class="text_c">Động Từ Thức</p>
+                </div>
+                <!--End Content Nga Sơn -->
+                
+                <!--Content Tĩnh Gia -->
+                <div id="supernote-note-tinhgia" class="snp-mouseoffset pinnable notedefault">
+                   <a name="tinhgia"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Tĩnh Gia !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Dong-Truong-Lam.png" width="200" /></div>
+                   <p class="text_c">Động Trường Lâm</p>
+                </div>
+                <!--End Content Tĩnh Gia -->
+                
+                <!--Content Bỉm Sơn -->
+                <div id="supernote-note-TXBimSon" class="snp-mouseoffset pinnable notedefault">
+                   <a name="tinhgia"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với thị xã Bỉm Sơn !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Den-Song.png" width="200" /></div>
+                   <p class="text_c">Đền Sòng</p>
+                </div>
+                <!--End Content Bỉm Sơn -->
+                
+                <!--Content Sầm Sơn-->
+                <div id="supernote-note-TXSamSon" class="snp-mouseoffset pinnable notedefault">
+                   <a name="tinhgia"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với thị xã Sầm Sơn !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Hon-Trong-Mai.png" width="200" /></div>
+                   <p class="text_c">Hòn Trống Mái</p>
+                </div>
+                <!--End Content Sầm Sơn -->
+                
+                <!--Content TP Thanh Hóa-->
+                <div id="supernote-note-TPThanhHoa" class="snp-mouseoffset pinnable notedefault">
+                   <a name="tinhgia"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với TP Thanh Hóa !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Hon-Trong-Mai.png" width="200" /></div>
+                   <p class="text_c">Cầu Hàm Rồng</p>
+                </div>
+                <!--End Content TP Thanh Hóa -->
+                
+                <!--Content Vĩnh Lộc -->
+                <div id="supernote-note-vinhloc" class="snp-mouseoffset pinnable notedefault">
+                   <a name="tinhgia"></a>
+                   <h5><a href="#" class="note-close">X</a>Chào bạn đến với Vĩnh Lộc !</h5> 
+                   <div class="img_note fl"><img src="http://thanhnhaho.vn/Portals/BanDoDuLich/Images/Thanh-Nha-Ho.png" width="200" /></div>
+                   <p class="text_c">Thành nhà Hồ</p>
+                </div>
+                <!--End Content Vĩnh Lộc  -->
+                </div></div>
+                <div class="background" style="background-image:url(https://seventravel.com.vn/wp-content/uploads/2019/05/sam-son-4.jpg)"></div>
+              </section>
+              <!---------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
+
+              <!---------------------------------------------slide Nghệ An------------------------------------------------------------------------------->
+            <section class="slide fade-6 kenBurns" id="NgheAn">
+              <div class="content">
+                <div class="container">
+                  <h1 class="ae-1"><center><b>NGHỆ AN</b></center></h1>
+                  <script type="text/javascript">
+                    var supernote = new SuperNote('supernote', {});
+                    function animFade(ref, counter)
+                    {
+                     var f = ref.filters, done = (counter == 1);
+                     if (f)
+                     {
+                      if (!done && ref.style.filter.indexOf("alpha") == -1)
+                       ref.style.filter += ' alpha(opacity=' + (counter * 10) + ')';
+                      else if (f.length && f.alpha) with (f.alpha)
+                      {
+                       if (done) enabled = false;
+                       else { opacity = (counter * 10); enabled=true }
+                      }
+                     }
+                     else ref.style.opacity = ref.style.MozOpacity = counter*2.999;
+                    };
+                    supernote.animations[supernote.animations.length] = animFade;
+                    
+                    addEvent(document, 'click', function(evt)
+                    {
+                     var elm = evt.target || evt.srcElement, closeBtn, note;
+                    
+                     while (elm)
+                     {
+                      if ((/noteclose/).test(elm.className)) closeBtn = elm;
+                      if ((/snb-pinned/).test(elm.className)) { note = elm; break }
+                      elm = elm.parentNode;
+                     }
+                    
+                     if (closeBtn && note)
+                     {
+                      var noteData = note.id.match(/([a-z_\-0-9]+)-note-([a-z_\-0-9]+)/i);
+                      for (var i = 0; i < SuperNote.instances.length; i++)
+                       if (SuperNote.instances[i].myName == noteData[1])
+                       {
+                        setTimeout('SuperNote.instances[' + i + '].setVis("' + noteData[2] +
+                         '", false, true)', 10);
+                      cancelEvent(evt);
+                       }
+                     }
+                    });
+                    
+                    addEvent(supernote, 'show', function(noteID)
+                    {
+                     // Do cool stuff here!
+                    });
+                    addEvent(supernote, 'hide', function(noteID)
+                    {
+                     // Do cool stuff here!
+                    });
+                    
+                    </script>
+                    
+                    
+                    <div class="bandobg fl"></div>
+                    
+                    <div class="khungbando">
+                      <a href="#vinh" class="supernote-hover-vinh"><div class="vinh fl">TP Vinh</div></a>
+                      <a href="#namdan" class="supernote-hover-namdan"><div class="namdan fl">Nam Đàn</div></a>
+                      <a href="#cualo" class="supernote-hover-cualo"><div class="cualo fl">Cửa Lò</div></a>
+                  
+                    </div>
+                    
+                    <script>
+                    $("a").hover(function(){$(this).fadeOut(10);$(this).fadeIn(100);});
+                    </script>
+                    
+                    <div id="supernote-note-vinh" class="snpmouseoffset pinnable notedefault1">
+                       <a name="vinh"></a>
+                       <h5><a href="#" class="noteclose">X</a>Chào bạn đến với Thành phố Vinh!</h5> 
+                       <div class="imgnote fl"><img src="https://cdnmedia.baotintuc.vn/Upload/Td3qmSNSjM5mhekL9vM2Q/files/2020/05/TPvinh/DJI_0210.jpg" width="200" /></div>
+                       <p class="text_c">Thành Phố Vinh</p>
+                       <a href="#anchor-vinh" class="supernote-hover-vinh"></a>
+                    </div>
+                    
+                    <div id="supernote-note-namdan" class="snpmouseoffset pinnable notedefault1">
+                       <a name="namdan"></a>
+                       <h5><a href="#" class="noteclose">X</a>Chào bạn đến với Nam Đàn</h5> 
+                      <a href="file:///E:/Hackathon/code/didanh.html" target="_blank"> <div class="imgnote fl"><img src="https://staticproxy.mytourcdn.com/480x360,q90/resources/pictures/locations/iqy1431417413.jpg" width="200" /></div></a>
+                       <p class="text_c">Làng Sen - Quê Bác</p>
+                    </div>
+                  
+                    <div id="supernote-note-cualo" class="snpmouseoffset pinnable notedefault1">
+                       <a name="cualo"></a>
+                       <h5><a href="#" class="noteclose">X</a>Chào bạn đến với Cửa Lò</h5> 
+                       <div class="imgnote fl"><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Cualovedem.jpg" width="200" /></div>
+                       <p class="text_c">CỬA LÒ</p>
+                    </div></div>
+                    </div>
+                    <div class="background" style="background-image:url(https://media.truyenhinhdulich.vn/upload/news/6345_binh_yen_nhung_nep_nha_tranh_noi_que_bac.jpg)"></div>  
+              </section>
+    </body>
+</html>
